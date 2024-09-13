@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AI and Active Learning Framework &#8212; Learning with AI Practical guide for personalized active learning</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter1/ai_active_learning_framework';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assignment vs. Assessment: Understanding the differences" href="assignment_vs_assessment.html" />
+    <link rel="prev" title="Active Learning Methodologies with AI integration" href="active_learning_methodologies.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Learning with AI Practical guide for personalized active learning - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Learning with AI Practical guide for personalized active learning - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction-to-chapter1.html">AI-Enhanced Framework for Active Learning, Assignments, and Assessment in Higher Education</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="active_learning_methodologies.html">Active Learning Methodologies with AI integration</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">AI and Active Learning Framework</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="assignment_vs_assessment.html">Assignment vs. Assessment: Understanding the differences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ai_assessment_framework.html">AI and Assessment Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai-assignment-framework.html">AI and Assignment Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feedback_active_learning.html">Feedback in Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompt_engineering_active_learning.html">Prompt engineering in Active Learning and AI integration</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="glossary_ai_education.html">Glossary of AI-powered education</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter2/introduction-to-chapter2.html">Engaging Hands-on Activities for Teachers using GenAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity1_exploring_active_learning.html">Activity 1: Exploring Active Learning and AI in Education</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity2_ai_assisted_assignment_creation.html">Activity 2: AI-Assisted Assignment Creation</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity3_ai_powered_quiz_creation.html">Activity 3: AI-Powered Quiz Creation: Tailoring Assessments</a></li>
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/uminhodh/teaching-with-ai/edit/main/book/chapter1/ai_active_learning_framework.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter1/ai_active_learning_framework.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AI and Active Learning Framework</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">AI and Active Learning Framework</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-enhanced-active-learning">AI-Enhanced Active Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-assisted-active-learning"><strong>AI-Assisted Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-resistant-active-learning"><strong>AI-Resistant Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-inclusive-active-learning"><strong>AI-Inclusive Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentic-active-learning">Authentic Active Learning</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ai-and-active-learning-framework">
+<h1>AI and Active Learning Framework<a class="headerlink" href="#ai-and-active-learning-framework" title="Link to this heading">#</a></h1>
+<p>In this section, we explore how different approaches to integrating AI in education can <strong>enhance</strong>, <strong>assist</strong>, <strong>resist</strong>, or <strong>adapt</strong> to student learning in active learning <a class="reference external" href="http://environments.To">environments.To</a> understand the potential of AI in active learning, it’s important to grasp <strong>key concepts</strong> that define these applications:</p>
+<ul class="simple">
+<li><p><strong>AI-Enhanced Learning:</strong> Personalized experiences with immediate feedback.</p></li>
+<li><p><strong>AI-Assisted Learning:</strong> AI manages logistical tasks, allowing students to focus on critical thinking.</p></li>
+<li><p><strong>AI-Resistant Learning:</strong> Prioritizes human creativity and original thought, where AI plays a limited role.</p></li>
+<li><p><strong>AI-Inclusive Learning:</strong> AI ensures equitable access for all students by adapting content to diverse needs.</p></li>
+<li><p><strong>AI-Authentic Learning:</strong> AI simulates real-world environments, helping students apply their knowledge to professional contexts.</p></li>
+</ul>
+<hr class="docutils" />
+<p>Concept Applications Across Disciplines</p>
+<p>Below we will explore how each of these AI learning approaches—<strong>AI-Enhanced</strong>, <strong>AI-Assisted</strong>, <strong>AI-Resistant</strong>, <strong>AI-Inclusive</strong>, and <strong>AI-Authentic</strong>—can be applied to <strong>active learning environments</strong> across different disciplines. Each approach is illustrated with real-world examples and supported by specific AI tools, such as ChatGPT, that enhance the student learning experience while promoting critical engagement and creativity.</p>
+<section id="ai-enhanced-active-learning">
+<h2>AI-Enhanced Active Learning<a class="headerlink" href="#ai-enhanced-active-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Pedagogical Rationale</strong>: Supports <strong>constructivist theory</strong> by offering personalized, real-time feedback through simulations, exercises, and adaptive content.</p></li>
+<li><p><strong>Application</strong>: AI tools create environments where students test hypotheses and analyze results interactively. AI tools allow students to engage in complex simulations, problem-solving tasks, or adaptive exercises. For example, a computer science student running an algorithm simulation can adjust parameters and observe the real-time effects, helping them construct a deeper understanding of abstract concepts.</p></li>
+<li><p><strong>Examples</strong>:</p></li>
+<li><p><strong>Computer Science</strong>:<br />
+AI simulations of algorithms where students test different sorting methods and receive instant feedback on efficiency.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for generating explanations, problem-solving support, and suggesting code optimizations.</p></li>
+<li><p><strong>Labster</strong> for interactive simulations and <strong>Smart Sparrow</strong> for personalized feedback in algorithm simulations.</p></li>
+</ul>
+</li>
+<li><p><strong>History</strong>:<br />
+AI-driven simulations of historical events (e.g., battles) where students explore different outcomes based on decisions.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for providing historical context, generating explanations, and summarizing key events.</p></li>
+<li><p><strong>Labster</strong> for simulations and <strong>ChronoZoom</strong> for interactive history timelines and events.</p></li>
+</ul>
+</li>
+<li><p><strong>Physics</strong>:<br />
+AI-powered virtual labs where students experiment with physical laws (e.g., gravity, energy transfer) and receive real-time feedback.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for answering conceptual questions and providing feedback on experiments.</p></li>
+<li><p><strong>PhET Interactive Simulations</strong> for virtual physics labs, providing real-time feedback on experiments.</p></li>
+</ul>
+</li>
+<li><p><strong>Biology</strong>:<br />
+AI-driven ecosystem simulations where students manipulate variables like species population and environmental changes to observe impacts on biodiversity.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for explaining biological processes and providing hypotheses for experiments.</p></li>
+<li><p><strong>Labster</strong> for virtual biology labs and <strong>Smart Sparrow</strong> for adaptive biology exercises that provide real-time feedback.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ai-assisted-active-learning">
+<h2><strong>AI-Assisted Active Learning</strong><a class="headerlink" href="#ai-assisted-active-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Pedagogical Rationale:</strong> Aligns with <strong>social constructivism</strong>, focusing on collaboration. AI assists in organizing and managing group activities.</p></li>
+<li><p><strong>Application</strong>: AI tools scaffold tasks like organizing data or generating <a class="reference external" href="http://feedback.AI">feedback.AI</a> can facilitate discussions by organizing contributions, helping students navigate complex group projects, or generating initial feedback for peer reviews. For example, an AI might summarize key points from student discussions or guide group work, allowing students to focus on deeper collaboration and analysis.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><p><strong>Psychology</strong>:<br />
+AI organizes group discussions on case studies, ensuring all students contribute and that psychological theories are applied accurately.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for summarizing case studies, generating key discussion points, and suggesting questions for further exploration.</p></li>
+<li><p><strong>Slack AI</strong> to organize discussions, and <strong>Perusall</strong> to facilitate collaborative peer discussions on case studies.</p></li>
+</ul>
+</li>
+<li><p><strong>Law</strong>:<br />
+AI provides case law and legal precedents during moot court, helping students structure their arguments.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for generating summaries of legal cases, offering insights, and structuring arguments.</p></li>
+<li><p><strong>Slack AI</strong> for task organization, and <strong>Casetext</strong> for legal research and analysis of case precedents.</p></li>
+</ul>
+</li>
+<li><p><strong>Environmental Science</strong>:<br />
+AI assists in group research by organizing data and generating feedback on data interpretation.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for analyzing environmental data and suggesting interpretations or solutions for sustainability projects.</p></li>
+<li><p><strong>Slack AI</strong> for project collaboration, and <strong>Google AI-powered services</strong> for data organization and feedback generation.</p></li>
+</ul>
+</li>
+<li><p><strong>Sociology</strong>:<br />
+AI facilitates group analysis of social issues, organizing diverse viewpoints into coherent frameworks for discussion.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for generating questions, organizing group discussions, and summarizing diverse perspectives on social issues.</p></li>
+<li><p><strong>Slack AI</strong> for facilitating group discussions, and <strong>Perusall</strong> for annotating and interacting with readings collaboratively.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ai-resistant-active-learning">
+<h2><strong>AI-Resistant Active Learning</strong><a class="headerlink" href="#ai-resistant-active-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Pedagogical Rationale</strong>: Focuses on human-centered skills like <strong>creativity, ethical reasoning, and personal reflection</strong>, promoting originality.</p></li>
+<li><p><strong>Application</strong>: Students engage in reflective essays, debates, and creative projects.  Tasks like reflective essays, debates, and creative projects foster deeper intellectual engagement. Students must engage in tasks that demand personal insight, creative problem-solving, or ethical reasoning that AI cannot automate.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><p><strong>Philosophy</strong>:<br />
+Students participate in debates about ethical issues (e.g., free will vs. determinism), requiring spontaneous, critical responses that AI cannot generate.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for brainstorming ethical dilemmas and providing philosophical insights while students generate original arguments.</p></li>
+<li><p><strong>Padlet</strong> for brainstorming and reflection, where students organize their own thoughts, with AI assisting minimally.</p></li>
+</ul>
+</li>
+<li><p><strong>Literature</strong>:<br />
+Students analyze complex themes in a novel and write personal reflections on how those themes relate to modern social issues.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for providing insights into themes, offering explanations, and summarizing literary analysis approaches.</p></li>
+<li><p><strong>Google Jamboard</strong> for organizing collaborative discussions and ideas around themes without relying on AI-generated content.</p></li>
+</ul>
+</li>
+<li><p><strong>Design</strong>:<br />
+Students create original product designs, where AI can assist in research but cannot replace the creative process.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for providing design inspiration, background research, and constructive feedback on product concepts.</p></li>
+<li><p><strong>Padlet</strong> for organizing ideas and reflections during the creative process, with AI providing only minor assistance.</p></li>
+</ul>
+</li>
+<li><p><strong>Ethics in Business</strong>:<br />
+Students present case studies on ethical dilemmas in business, providing real-time solutions based on personal values and critical analysis.<br />
+<em>Real-world AI tools</em>:</p>
+<ul>
+<li><p><strong>ChatGPT</strong> for offering ethical scenarios, guiding research, and helping to explore business ethics frameworks.</p></li>
+<li><p><strong>Google Jamboard</strong> for brainstorming ideas during case study presentations, where students generate original solutions.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ai-inclusive-active-learning">
+<h2><strong>AI-Inclusive Active Learning</strong><a class="headerlink" href="#ai-inclusive-active-learning" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><strong>Pedagogical Rationale</strong>: Ensures <strong>equitable participation</strong> for all students, aligning with <strong>Universal Design for Learning (UDL)</strong> principles, which emphasize creating accessible learning environments that accommodate diverse needs. AI helps adapt content, provide scaffolding, and offer personalized learning pathways, ensuring no student is left behind..</p></li>
+<li><p><strong>Application</strong>: AI tailors learning experiences to individual needs. AI tailors learning experiences based on individual needs, offering alternative formats (e.g., text-to-speech, reading levels) and providing real-time feedback that matches each student’s proficiency.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<p><strong>Education</strong>:<br />
+AI modifies reading levels or provides text-to-speech for students with learning disabilities, ensuring equitable participation in classroom discussions.<br />
+<em>Real-world AI tools</em>:</p>
+</li>
+<li><p><strong>ChatGPT</strong> for adjusting text complexity, explaining concepts in simpler terms, and offering personalized learning paths.</p></li>
+<li><p><strong>Read&amp;Write AI</strong> for reading support, including text-to-speech and simplified texts for different learning levels.</p>
+<p><strong>Mathematics</strong>:<br />
+AI-generated exercises adapt to students’ proficiency levels, offering differentiated instruction for students at different stages of understanding.<br />
+<em>Real-world AI tools</em>:</p>
+</li>
+<li><p><strong>ChatGPT</strong> for offering step-by-step problem-solving help and creating exercises at different difficulty levels.</p></li>
+<li><p><strong>Quizlet</strong> for adaptive flashcards and personalized learning experiences tailored to each student’s progress.</p>
+<p><strong>Foreign Languages</strong>:<br />
+AI provides scaffolding for language learners by offering translations, pronunciation practice, and personalized feedback based on the learner’s language level.<br />
+<em>Real-world AI tools</em>:</p>
+</li>
+<li><p><strong>ChatGPT</strong> for providing instant translation, conversation practice, and grammar correction.</p></li>
+<li><p><strong>Google Translate</strong> for translations, and <strong>Duolingo AI-powered tools</strong> for personalized language learning support.</p>
+<p><strong>STEM</strong>:<br />
+AI offers visual simulations and interactive tools for students with visual or auditory impairments, adapting the learning environment to their needs.<br />
+<em>Real-world AI tools</em>:</p>
+</li>
+<li><p><strong>ChatGPT</strong> for generating explanations, describing visual content in alternative formats, and offering interactive problem-solving.</p></li>
+<li><p><strong>Read&amp;Write AI</strong> for reading and visual support, and <strong>PhET Interactive Simulations</strong> adapted for accessibility needs in STEM education.</p></li>
+</ul>
+</section>
+<section id="authentic-active-learning">
+<h2>Authentic Active Learning<a class="headerlink" href="#authentic-active-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Pedagogical Rationale</strong>: Authentic Active Learning immerses students in real-world tasks, encouraging deep engagement with content that reflects academic, professional, or societal contexts. Aligned with experiential and problem-based learning, this approach requires students to critically think, create, and apply knowledge in meaningful and relevant ways.</p></li>
+<li><p><strong>Application</strong>: Students engage in case studies, problem-solving tasks, or project-based learning that reflect actual challenges in their fields. This approach leverages AI tools to simulate real-world scenarios, analyze data, or facilitate collaboration, all while allowing students to remain in control of their decisions and outputs.</p></li>
+<li><p>Examples:</p>
+<ul>
+<li><p><strong>Business</strong>:<br />
+Students analyze real-world financial data and develop business strategies for a company, applying their knowledge to a situation that mirrors real-world business challenges.<br />
+<em>Real-world AI tools</em>:</p>
+<ol class="arabic simple">
+<li><p><strong>ChatGPT</strong> for generating insights on financial trends and offering strategic suggestions.</p></li>
+<li><p><strong>Google Cloud AutoML</strong> for data ana</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id1">
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="active_learning_methodologies.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Active Learning Methodologies with AI integration</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="assignment_vs_assessment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment vs. Assessment: Understanding the differences</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">AI and Active Learning Framework</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-enhanced-active-learning">AI-Enhanced Active Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-assisted-active-learning"><strong>AI-Assisted Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-resistant-active-learning"><strong>AI-Resistant Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-inclusive-active-learning"><strong>AI-Inclusive Active Learning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentic-active-learning">Authentic Active Learning</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sílvia Lima Gonçalves Araújo
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

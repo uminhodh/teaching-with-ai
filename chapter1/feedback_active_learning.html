@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Feedback in Active Learning &#8212; Learning with AI Practical guide for personalized active learning</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter1/feedback_active_learning';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prompt engineering in Active Learning and AI integration" href="prompt_engineering_active_learning.html" />
+    <link rel="prev" title="AI and Assignment Framework" href="ai-assignment-framework.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Learning with AI Practical guide for personalized active learning - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Learning with AI Practical guide for personalized active learning - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction-to-chapter1.html">AI-Enhanced Framework for Active Learning, Assignments, and Assessment in Higher Education</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="active_learning_methodologies.html">Active Learning Methodologies with AI integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_active_learning_framework.html">AI and Active Learning Framework</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="assignment_vs_assessment.html">Assignment vs. Assessment: Understanding the differences</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ai_assessment_framework.html">AI and Assessment Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai-assignment-framework.html">AI and Assignment Framework</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Feedback in Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompt_engineering_active_learning.html">Prompt engineering in Active Learning and AI integration</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="glossary_ai_education.html">Glossary of AI-powered education</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter2/introduction-to-chapter2.html">Engaging Hands-on Activities for Teachers using GenAI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity1_exploring_active_learning.html">Activity 1: Exploring Active Learning and AI in Education</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity2_ai_assisted_assignment_creation.html">Activity 2: AI-Assisted Assignment Creation</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../chapter2/activity3_ai_powered_quiz_creation.html">Activity 3: AI-Powered Quiz Creation: Tailoring Assessments</a></li>
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/uminhodh/teaching-with-ai/edit/main/book/chapter1/feedback_active_learning.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter1/feedback_active_learning.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feedback in Active Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-feedback"><strong>Types of feedback</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-levels"><strong>Feedback levels</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-based-feedback-using-ai-tools">AI-Based Feedback Using AI Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formative-feedback">Formative Feedback</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="feedback-in-active-learning">
+<h1>Feedback in Active Learning<a class="headerlink" href="#feedback-in-active-learning" title="Link to this heading">#</a></h1>
+<p><strong>Feedback</strong> plays a crucial role in helping students improve and reflect on their learning journey. By integrating AI, feedback can be timely, personalized, and more actionable.</p>
+<section id="types-of-feedback">
+<h2><strong>Types of feedback</strong><a class="headerlink" href="#types-of-feedback" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Self-Feedback</strong>: Encourages reflection and self-assessment.</p></li>
+<li><p><strong>Peer Feedback</strong>: Engages students in reviewing each other’s work, fostering collaboration.</p></li>
+<li><p><strong>Teacher Feedback</strong>: Traditional feedback with support from AI tools for more detailed responses.</p></li>
+<li><p><strong>AI-Based Feedback</strong>: AI tools (e.g., <strong>Grammarly</strong>, <strong>Socrative</strong>) offer immediate, formative feedback, helping students adjust their work continuously.</p></li>
+</ul>
+</section>
+<section id="feedback-levels">
+<h2><strong>Feedback levels</strong><a class="headerlink" href="#feedback-levels" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Task and Product Level</strong>: Focus on the quality of the student’s output (e.g., “Your essay needs more analysis of X”).</p></li>
+<li><p><strong>Process Level</strong>: Offer strategies for improving the student’s approach (e.g., “Try editing your argument flow”).</p></li>
+<li><p><strong>Self-Regulation Level</strong>: Encourage students to reflect on their learning process (e.g., “Consider your progress and set new goals”).</p></li>
+</ol>
+</section>
+<section id="ai-based-feedback-using-ai-tools">
+<h2>AI-Based Feedback Using AI Tools<a class="headerlink" href="#ai-based-feedback-using-ai-tools" title="Link to this heading">#</a></h2>
+<p>AI-based feedback, particularly through tools like ChatGPT and similar AI technologies, enhances the educational process by providing personalized, timely, and actionable insights. This framework outlines how these AI tools can be utilized for both formative and summative feedback, incorporating key AI concepts such as the feedback loop.</p>
+<hr class="docutils" />
+<p>Types of Feedback with AI Tools</p>
+<section id="formative-feedback">
+<h3>Formative Feedback<a class="headerlink" href="#formative-feedback" title="Link to this heading">#</a></h3>
+<ul>
+<li><h6 class="rubric" id="immediate-feedback"><em>Immediate Feedback</em></h6>
+<ul>
+<li><p><strong>Description:</strong> Offers real-time corrections and suggestions as students work on their tasks.</p>
+<ul class="simple">
+<li><p><strong>Examples:</strong> Grammar fixes, style suggestions, and content improvements during writing assignments.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools provide instant feedback on drafts, helping students correct errors and refine their work as they write or edit. They offer suggestions for enhancing clarity, coherence, and overall quality.</p></li>
+</ul>
+</li>
+<li><h6 class="rubric" id="contextual-feedback"><em>Contextual Feedback</em></h6>
+<ul class="simple">
+<li><p><strong>Description:</strong> Provides guidance specific to the context or subject of the assignment.</p></li>
+<li><p><strong>Examples:</strong> Advice on how to approach a particular topic or additional resources for deeper understanding.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools analyze the content and provide context-specific feedback, such as suggesting relevant resources or giving tailored advice based on the subject matter.</p></li>
+</ul>
+</li>
+<li><h6 class="rubric" id="adaptive-feedback"><em>Adaptive Feedback</em></h6>
+<ul class="simple">
+<li><p><strong>Description:</strong> Customizes feedback based on individual student performance and needs.</p></li>
+<li><p><strong>Examples:</strong> Personalized tips and resources based on previous submissions or performance patterns.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools adapt their feedback based on the student’s past work, offering targeted advice and recommendations that evolve as the student progresses.</p></li>
+</ul>
+</li>
+<li><h6 class="rubric" id="reflective-feedback"><em>Reflective Feedback</em></h6>
+<ul class="simple">
+<li><p><strong>Description:</strong> Encourages students to reflect on their learning process and outcomes.</p></li>
+<li><p><strong>Examples:</strong> Prompts for self-assessment and reflection on what has been learned and areas for improvement.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools can pose reflective questions to students, guiding them through a self-evaluation process and encouraging deeper thought about their learning journey.</p></li>
+</ul>
+</li>
+</ul>
+<h5 class="rubric" id="summative-feedback">Summative Feedback</h5>
+<ul>
+<li><h6 class="rubric" id="global-evaluation"><em>Global Evaluation</em></h6>
+<ul class="simple">
+<li><p><strong>Description:</strong> Provides a comprehensive review of the student’s performance at the end of a project or task.</p></li>
+<li><p><strong>Examples:</strong> Summary of strengths, weaknesses, and overall performance after final submissions.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools evaluate the final work against established criteria, providing a detailed summary and overall assessment of performance. They can generate insights on key strengths and areas for improvement based on the final output.</p></li>
+</ul>
+</li>
+<li><h6 class="rubric" id="criterion-based-feedback"><em>Criterion-Based Feedback</em></h6>
+<ul class="simple">
+<li><p><strong>Description:</strong> Assesses work according to specific rubrics or standards.</p></li>
+<li><p><strong>Examples:</strong> Feedback based on a rubric, detailing how well the work meets each criterion.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools help apply rubrics to the student’s work, offering detailed feedback on how well each criterion is met and suggesting improvements.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>AI Concepts in Feedback</strong></p>
+<ol class="arabic simple">
+<li><p><strong>AI Feedback Loop</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> A continuous process where students receive iterative feedback and make adjustments based on AI insights.</p></li>
+<li><p><strong>Examples:</strong> Students submit drafts, receive feedback from AI tools, revise their work, and get additional feedback on the revisions.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools facilitate a feedback loop by providing ongoing comments and suggestions as students refine their work over multiple iterations.</p></li>
+</ul>
+</li>
+<li><p><strong>AI-Assisted Peer Feedback</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> Enhances peer review processes with AI support to structure and guide feedback.</p></li>
+<li><p><strong>Examples:</strong> Students use AI tools to generate questions or criteria for peer evaluations, improving the quality of peer feedback.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools assist in creating structured peer feedback prompts and guidelines, ensuring that peer evaluations are constructive and aligned with learning objectives.</p></li>
+</ul>
+</li>
+<li><p><strong>AI-Assisted Multiple-Choice Feedback</strong></p>
+<ul class="simple">
+<li><p><strong>Description:</strong> Provides immediate grading and feedback on multiple-choice questions with tailored explanations.</p></li>
+<li><p><strong>Examples:</strong> Instant feedback on quiz answers with explanations for correct and incorrect responses.</p></li>
+<li><p><strong>AI Integration with AI Tools:</strong> AI tools can analyze multiple-choice quiz responses, offer immediate feedback, and explain why certain answers are correct or incorrect, enhancing understanding and learning.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ai-assignment-framework.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">AI and Assignment Framework</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="prompt_engineering_active_learning.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Prompt engineering in Active Learning and AI integration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-feedback"><strong>Types of feedback</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-levels"><strong>Feedback levels</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-based-feedback-using-ai-tools">AI-Based Feedback Using AI Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formative-feedback">Formative Feedback</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sílvia Lima Gonçalves Araújo
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
