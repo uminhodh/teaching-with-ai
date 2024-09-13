@@ -14,7 +14,7 @@ In education, assignments and assessments serve distinct yet complementary purpo
 
 ---
 
-#### Introduction to Assessment of, for, and as Learning
+#### Introduction to Assessment OF, FOR, and AS Learning
 
 Assessments can be classified into three categories: **Assessment of Learning**, **Assessment for Learning**, and **Assessment as Learning**. 
 
