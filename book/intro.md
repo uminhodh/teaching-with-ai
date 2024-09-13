@@ -1,11 +1,21 @@
-# Welcome to your Jupyter Book
+# Introduction
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This book is a work in progress and contains the material for the **Summer School on Active Learning: Integrating Artificial Intelligence in Higher Education**.
 
-Check out the content pages bundled with this sample book to see more.
+**Event Dates:**  
+**17 – 19 September 2024** | **University of Padua**  
+**Location:** Padua, Italy
+
+## Title: Learning with AI - A Practical Guide for Personalized Active Learning
+
+### Author: Sílvia Araújo
+
+I am an Associate Professor at the School of Arts and Humanities of the University of Minho. Specialising in corpus linguistics, natural language processing, and the application of AI technologies to education, I coordinate the Master's in Digital Humanities and the Digital Humanities Research Group at CEHUM. I also conduct tech-integration training at the IDEA-UMinho Center.
+
+---
+
+This guide is designed to provide insights and practical strategies for integrating AI into active learning methodologies within higher education settings. We will explore various frameworks and tools, equipping educators with the skills and knowledge to leverage AI for personalized, student-centered learning.
+
 
 ```{tableofcontents}
 ```

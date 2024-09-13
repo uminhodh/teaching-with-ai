@@ -1,5 +1,5 @@
 
-### Glossary of AI-powered education
+#### Glossary of AI-powered education
 
 To enhance understanding of key terms related to AI-powered learning, here’s a detailed glossary:
 

@@ -1,4 +1,4 @@
-### AI-Enhanced Framework for Active Learning, Assignments, and Assessment in Higher Education
+## AI-Enhanced Framework for Active Learning, Assignments, and Assessment in Higher Education
 
 This framework outlines how AI can be integrated into university education to enhance Active Learning, design AI-inclusive Assignments, and create AI-assisted Assessments. The aim is to foster engagement, creativity, and critical thinking while maintaining student agency and originality.
 
