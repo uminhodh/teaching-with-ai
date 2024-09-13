@@ -74,9 +74,6 @@ Table 2: Examples of AI-Powered Formative and Summative Assignments Using ChatGP
 | **9\. AI-Enhanced Peer Feedback Loop (Medicine)** Medical students use ChatGPT to provide constructive feedback on peer-written case studies, with the AI guiding multiple rounds of feedback and revisions to improve diagnosis and treatment plans. | **9\. AI-Assisted Portfolio Assessment (Architecture)** Students submit a design portfolio showcasing their work over the semester. ChatGPT evaluates the evolution of their design process, technical skills, and creativity in the projects. |
 | **10\. AI-Assisted Multiple-Choice Quizzes (Computer Science)** Students complete an AI-generated multiple-choice quiz on algorithms and receive immediate feedback on their answers, with explanations for any incorrect choices. | **10\. AI-Enhanced Rubric-Based Assessment (Nursing)** Nursing students submit a final care plan, and ChatGPT applies a detailed rubric to assess patient care strategies, decision-making processes, and adherence to best practices. |
 
-### ---
-
-### 
 
 #####       Assessment formats 
 
