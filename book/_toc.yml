@@ -1,0 +1,20 @@
+# Table of contents for your Jupyter Book
+format: jb-book
+root: intro
+
+chapters:
+- file: chapter1/introduction-to-chapter1
+  sections:
+    - file: chapter1/active_learning_methodologies
+    - file: chapter1/ai_active_learning_framework
+    - file: chapter1/assignment_vs_assessment
+    - file: chapter1/ai_assessment_framework
+    - file: chapter1/ai-assignment-framework
+    - file: chapter1/feedback_active_learning
+    - file: chapter1/prompt_engineering_active_learning
+    - file: chapter1/glossary_ai_education
+- file: chapter2/introduction-to-chapter2
+  sections:
+    - file: chapter2/activity1_exploring_active_learning
+    - file: chapter2/activity2_ai_assisted_assignment_creation
+    - file: chapter2/activity3_ai_powered_quiz_creation

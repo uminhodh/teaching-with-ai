@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Activity 1: Exploring Active Learning and AI in Education &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter2/activity1_exploring_active_learning';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Activity 2: AI-Assisted Assignment Creation" href="activity2_ai_assisted_assignment_creation.html" />
+    <link rel="prev" title="Engaging Hands-on Activities for Teachers using GenAI" href="introduction-to-chapter2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1/introduction-to-chapter1.html">AI-Enhanced Framework for Active Learning, Assignments, and Assessment in Higher Education</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction-to-chapter2.html">Engaging Hands-on Activities for Teachers using GenAI</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Activity 1: Exploring Active Learning and AI in Education</a></li>
+<li class="toctree-l2"><a class="reference internal" href="activity2_ai_assisted_assignment_creation.html">Activity 2: AI-Assisted Assignment Creation</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="activity3_ai_powered_quiz_creation.html">Activity 3: AI-Powered Quiz Creation: Tailoring Assessments</a></li>
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter2/activity1_exploring_active_learning.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter2/activity1_exploring_active_learning.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Activity 1: Exploring Active Learning and AI in Education</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="activity-1-exploring-active-learning-and-ai-in-education">
+<h1>Activity 1: Exploring Active Learning and AI in Education<a class="headerlink" href="#activity-1-exploring-active-learning-and-ai-in-education" title="Link to this heading">#</a></h1>
+<p><strong>Duration: 08:30 – 09:00 (30 minutes)</strong></p>
+<p><strong>Objective</strong>: This activity invites you to collaborate in pairs to generate questions that critically reflect on the integration of AI into an Active Learning context, focusing on how AI can enhance or reshape educational approaches.</p>
+<p><strong>Instructions</strong>:</p>
+<ul class="simple">
+<li><p><strong>Pair Assignment (5 minutes)</strong>: You are grouped in pairs to reflect on the intersection of Active Learning (AL) with one other educational concept and the role of Generative AI. Record the pairs’ names <a class="reference external" href="https://docs.google.com/document/d/1qyCBoQEw2kbAF9nDhKclgqq2H_yrlzigvdVacaRcsPk/edit">here</a>.</p></li>
+</ul>
+<p><strong>Tasks</strong>:</p>
+<ul class="simple">
+<li><p>Read the provided theoretical section in the workbook related to your concepts.</p></li>
+<li><p>Each pair builds 1 to 3 questions using ChatGPT that explore the connection between AL and their assigned concept, with a focus on GenAI.</p></li>
+</ul>
+<p><strong>Example Assigned Concept</strong>:<br />
+AL &amp; AI-Enhanced Assignments:</p>
+<ul class="simple">
+<li><p>How can AI-generated prompts support active learning through personalized and adaptive assignments?</p></li>
+<li><p>How can generative AI enhance students’ ability to self-assess their work in active learning assignments?</p></li>
+<li><p>In what ways can AI-powered feedback tools deepen students’ engagement in collaborative, active learning tasks?</p></li>
+</ul>
+<p><strong>Post on Padlet</strong>:</p>
+<ul>
+<li><p><strong>Once the questions are formulated, each group posts them in the <a class="reference external" href="https://padlet.com/workshopia9/coluna-k77uvrntxin9dtm6">Padlet</a></strong> column 2 titled “Activity 1: AL &amp; GenAI.” The post must be named “AL &amp; CONCEPT NAME.” In the post, explain the reasoning behind the selection of your question(s) <strong>(5 minutes)</strong>.</p></li>
+<li><p><strong>Rate the Post (7 minutes)</strong>: Review the posts from at least three other groups and use the star system (1 to 5) on Padlet to assess the relevance and quality of their questions, focusing on clarity, connection to AL, and integration of GenAI.</p></li>
+<li><p><strong>Peer Feedback on Padlet (7 minutes)</strong>: After reviewing, choose the question you find most relevant and provide a brief comment explaining why in the comments section under their post.</p></li>
+<li><h2 class="rubric" id="group-discussion-5-minutes-one-member-from-each-pair-will-present-their-conclusions-orally-why-do-you-think-the-selected-question-is-crucial-for-understanding-the-integration-of-ai-in-al"><strong>Group Discussion (5 minutes)</strong>: One member from each pair will present their conclusions orally: Why do you think the selected question is crucial for understanding the integration of AI in AL?</h2>
+<p><strong>Group assignments and Padlet</strong>: <a class="reference external" href="https://docs.google.com/document/d/1qyCBoQEw2kbAF9nDhKclgqq2H_yrlzigvdVacaRcsPk/edit?usp=sharing">HERE</a></p>
+</li>
+<li><p>Group 1: Active Learning &amp; Generative AI</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 2: Active Learning &amp; AI-Inclusive Assignments</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 3: Active Learning &amp; AI-Resistant Assignments</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 4: Active Learning &amp; AI-Authentic Assignments</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 5: Active Learning &amp; AI-Enhanced Assessment</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 6: Active Learning &amp; Instant AI feedback</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 7: Active Learning &amp; AI-Resistant Assessment</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 8: Active Learning &amp; Prompt Engineering</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 9: Active Learning &amp; AI-Inclusive Assessment</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 10: Active Learning &amp; AI-Authentic Assessment</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 11: Active Learning &amp;  Structured Prompt</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 12: Active Learning &amp; Zero-Shot Prompting</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 13: Active Learning &amp; Hybrid Prompting</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 14: Active Learning &amp; Chain-of-Thought Prompting</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 15: Active Learning &amp; AI-Enhanced Rubrics</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 16: Active Learning &amp; AI-Assisted Rubrics</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 17: Active Learning &amp; Few-Shot Prompting</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 18: Active Learning &amp; AI-Enhanced Peer Feedback Loop</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 19: Active Learning &amp; AI-Powered Formative Assessments</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Group 20: Active Learning &amp; AI-Powered Summative Assessment</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="introduction-to-chapter2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Engaging Hands-on Activities for Teachers using GenAI</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="activity2_ai_assisted_assignment_creation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Activity 2: AI-Assisted Assignment Creation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
