@@ -9,7 +9,6 @@ chapters:
 - file: chapters/ai_enhanced_learning
 - file: chapters/assignment_vs_assessment
 - file: chapters/ai_assessment_framework
-- file: chapters/feedback_active_learning
 - file: chapters/prompt_engineering_active_learning
 - file: chapters/ethical_considerations
 - file: chapters/introduction-to-chapter2
