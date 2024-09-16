@@ -1,55 +1,45 @@
-# Markdown Files
+{cite}`armstrong_bloom_nodate`
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+{cite}`anderson_krathwohl_taxonomy_2001`
 
-## What is MyST?
+{cite}`bloom_taxonomy_1956`
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+{cite}`cacay_effectiveness_2022`
 
-For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
+{cite}`cqsd_focus_2024`
 
-## Sample Roles and Directives
+{cite}`dawson_assessment_2017`
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+{cite}`duchatelet_fostering_2019`
 
-Here is a "note" directive:
+{cite}`follmer_roles_2023`
 
-```{note}
-Here is a note
-```
+{cite}`getting_started_assessment_website`
 
-It will be rendered in a special box when you build your book.
+{cite}`henderson_usefulness_2019`
 
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
+{cite}`henderson_impact_2019`
 
+{cite}`henderson_video_2015`
 
-## Citations
+{cite}`hoo_developing_2021`
 
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
+{cite}`kent-waters_compendium_nodate`
 
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
+{cite}`kubik_promoting_2021`
 
-```{bibliography}
-```
+{cite}`mollick_strategies_2023`
 
-## Learn more
+{cite}`mollick_assigning_2023`
 
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
+{cite}`molloy_developing_2020`
+
+{cite}`russell_fostering_2022`
+
+{cite}`shaw_authentic_2020`
+
+{cite}`schultz_defining_2021`
+
+{cite}`uq_practical_guidelines_2021`
+
+{cite}`tullis_why_2020`

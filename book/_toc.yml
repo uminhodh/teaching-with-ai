@@ -3,18 +3,34 @@ format: jb-book
 root: intro
 
 chapters:
-- file: chapter1/introduction-to-chapter1
+- file: chapters/active_learning_methodologies 
+- file: chapters/ai_role
+- file: chapters/ai_active_learning_framework
+- file: chapters/ai_enhanced_learning
+- file: chapters/assignment_vs_assessment
+- file: chapters/ai_assessment_framework
+- file: chapters/feedback_active_learning
+- file: chapters/prompt_engineering_active_learning
+- file: chapters/ethical_considerations
+- file: chapters/introduction-to-chapter2
+- file: chapters/activity1_exploring_active_learning
+- file: chapters/activity2_ai_assisted_assignment_creation
   sections:
-    - file: chapter1/active_learning_methodologies
-    - file: chapter1/ai_active_learning_framework
-    - file: chapter1/assignment_vs_assessment
-    - file: chapter1/ai_assessment_framework
-    - file: chapter1/ai-assignment-framework
-    - file: chapter1/feedback_active_learning
-    - file: chapter1/prompt_engineering_active_learning
-    - file: chapter1/glossary_ai_education
-- file: chapter2/introduction-to-chapter2
+    - file: chapters/activity2_ai_assisted_assignment_creation/sub_activity_2A
+      title: Sub-Activity 2A  # Add custom titles for the subpages
+    - file: chapters/activity2_ai_assisted_assignment_creation/sub_activity_2B
+      title: Sub-Activity 2B
+    - file: chapters/activity2_ai_assisted_assignment_creation/sub_activity_2C
+      title: Sub-Activity 2C
+- file: chapters/activity3
   sections:
-    - file: chapter2/activity1_exploring_active_learning
-    - file: chapter2/activity2_ai_assisted_assignment_creation
-    - file: chapter2/activity3_ai_powered_quiz_creation
+    - file: chapters/activity3/sub_activity_3A
+      title: Sub-Activity 3A
+    - file: chapters/activity3/sub_activity_3B
+      title: Sub-Activity 3Br
+    - file: chapters/activity3/sub_activity_3C
+      title: Sub-Activity 3Cr
+- file: chapters/pratical_integration
+- file: chapters/conclusion
+- file: chapters/glossary_ai_education
+- file: chapters/bibliography

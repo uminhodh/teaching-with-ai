@@ -1,57 +1,37 @@
 
-##### Activity 3: AI-Powered Quiz Creation: Tailoring Assessments
 
-Now that you’ve explored the role of AI in assignment creation and completed a task from a student’s perspective, we will focus on how AI can be leveraged to create quizzes tailored to diverse educational needs. In this next phase, we will explore three distinct quiz formats, each addressing specific challenges such as accessibility, feedback integration, and adaptability.
+### Activity 3: AI-Powered Quiz Creation 
 
-These activities will help you understand how AI can generate quizzes, provide immediate feedback, simplify content for diverse learners, and ensure that assessments are inclusive and personalized. 
+**Overview**: This activity demonstrates how AI can be leveraged to design quizzes that are inclusive, adaptive, and tailored to different learning needs.
 
-### ---
+#### Sub-Activity 3A: Creating a Quiz Tailored to Special Needs and Multilingual Options 
 
-Distinctive Features:
-
-* **Quiz 1**: Focuses on inclusivity by offering special accommodations and multilingual support.  
-* **Quiz 2**: Combines varied question types with a feedback system that offers both quantitative and qualitative insights.  
-* **Quiz 3**: Generates questions from a student-provided text corpus, with options for difficulty level and language choice.
-
-Common Features:
-
-* All quizzes aim to assess student understanding and provide constructive feedback.  
-* Each is structured around a quiz format but tailored to meet specific needs, whether focusing on accessibility, diverse question formats, or content customization.
-
-### ---
-
-**Sub-Activity 3A: Creating a Quiz Tailored to Special Needs and Multilingual Options**
-
-**Duration: 10:50 – 11:15** (25 minutes)
-
-**Objective**: Create a quiz tailored to students’ special needs, including special accommodations and multilingual versions.
-
+**Duration**: 10:50 – 11:15 (25 minutes)  
+**Objective**: Create quizzes that accommodate special needs and multilingual learners, ensuring inclusivity and accessibility.  
 **Steps**:
 
-* **Task: Quiz Creation for Special Needs (10 minutes)**:  
-  Copy and paste the provided prompt into ChatGPT to create a quiz that addresses special needs and includes multilingual options.  
-* **Post and Rating on Padlet (5 minutes)**:  
-  Share the AI-generated assignment link in the Padlet column titled "Activity 3A: Quiz" and rate it using the star system (1 to 5). *How well did the AI accommodate special needs and language options?*
+1. **Task**:  
+   * Use AI to create a quiz with multilingual support and special accommodations.  
+   * Consider how the quiz could benefit students with different learning needs, such as language barriers or disabilities.  
+2. **Post and Rating**:  
+   Share the quiz in the "Activity 3A: Quiz" column on Padlet, rating how effectively it addresses inclusivity and adaptability.
 
 **STRUCTURED PROMPT** [HERE](https://docs.google.com/document/d/1XtFBgcf9mXpbCPFEIXl6RutgLZNzVzfNBygPN20MSJA/edit?usp=sharing) 
 
-**PATH SIMULATION [HERE](https://chatgpt.com/share/cada8248-6db2-442b-b3c6-6637931e72fc)**
-
+**PATH SIMULATION [HERE](https://chatgpt.com/share/cada8248-6db2-442b-b3c6-6637931e72fc)**  
 
 ---
 
-**Sub-Activity 3B: Quiz for Students with Closed and Open Questions \+ Feedback**
+#### Sub-Activity 3B: Creating a Quiz with Closed and Open Questions \+ Feedback 
 
-**Duration: 11:15 – 11:30** (15 minutes)
-
-**Objective**: Design a quiz with both closed (e.g., multiple-choice, true/false) and open-ended questions, including feedback.
-
+**Duration**: 11:15 – 11:30 (15 minutes)  
+**Objective**: Create a quiz that includes both closed (e.g., multiple-choice, true/false) and open-ended questions with built-in feedback mechanisms.  
 **Steps**:
 
-* **Task: Quiz Creation with Feedback (10 minutes)**:  
-  Copy and paste the provided prompt into ChatGPT to generate a quiz with both closed and open-ended questions, incorporating feedback. Add options for students to simplify the language or ask for additional clarification.  
-* **Post and Rating on Padlet (5 minutes)**:  
-  Share the AI-generated assignment link in the Padlet column titled "Activity 3B: Quiz" and rate its feedback mechanism using the star system (1 to 5). *Reflect on how well the AI provided feedback for both closed and open-ended questions. Was the feedback useful?*
+1. **Task**:  
+   Use AI to generate a quiz with both closed and open-ended questions. Ensure that each question includes detailed feedback for students.  
+2. **Post and Rating**:  
+   Share the quiz on Padlet and evaluate its effectiveness based on the quality of feedback and variety of questions.
 
 **STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1T1cHP5X_sRlXif4ob0KF5pna2--8VkqpLXWxpOQhaQo/edit?usp=sharing).**
 
@@ -59,23 +39,36 @@ Common Features:
 
 ---
 
-**Sub-Activity 3C: Generating Questions from a Text Corpus with Difficulty Levels, Language Choice, and Feedback**
+#### Sub-Activity 3C: Generating Questions from a Text Corpus with Difficulty Levels and Language Choices 
 
-**Duration: 11:30 – 11:50** (20 minutes)
-
-**Objective**: Generate quiz questions from a text corpus provided by the students, adjusting difficulty levels and language customization.
-
+**Duration**: 11:30 – 11:50 (20 minutes)  
+**Objective**: Use AI to generate quiz questions from a text corpus, with options for difficulty levels and language **choices.**  
 **Steps**:
 
-* **Task: Question Generation from a Text Corpus (10 minutes)**:  
-  Copy and paste the provided prompt into ChatGPT to generate questions with varying difficulty levels and language options. Allow students to choose their preferred language to answer in and request hints or explanations if necessary  
-* **Post and Rating on Padlet (5 minutes)**:  
-  Share the AI-generated assignment link in the Padlet column titled "Activity 3C: Quiz" and evaluate its adaptability using the star system (1 to 5).  *Reflect on your experience with generating quiz questions from a text corpus.* 
+1. **Task (10 minutes)**:  
+   Use ChatGPT to generate quiz questions from a text corpus provided by students. Customize the quiz by allowing students to choose difficulty levels and languages for answering the questions. Include hints or explanations for each question if necessary.  
+   * **Example Prompt**: "Generate quiz questions based on the following text: \[Insert Text Corpus\]. Provide different levels of difficulty (easy, medium, hard) and allow for language choices (e.g., English, Spanish)."  
+2. **Post and Rating on Padlet (5 minutes)**:  
+   Share the AI-generated quiz on Padlet under the "Activity 3C: Quiz" column and rate it based on its adaptability to different learning needs, such as language choice and question difficulty.  
+3. **Discussion (5 minutes)**:  
+   Reflect on how effectively AI accommodated customization in the quiz design. Did the customization options enhance the quiz’s inclusivity and challenge for students?  
+   
 
 **STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1gvyGPyxDxhFWfEUhvY5SDN0Du_wNAn3tTZcoLILw6qY/edit?usp=sharing).**
 
-**PATH SIMULATION [HERE](https://chatgpt.com/share/c1855b04-9b5f-49c8-aa8e-4410bc5014ef)**  
+**PATH SIMULATION [HERE](https://chatgpt.com/share/c1855b04-9b5f-49c8-aa8e-4410bc5014ef)**
 
-### ---
 
-### 
+## 8.2. Key Takeaways from the Hands-on Activities 
+
+The activities demonstrate how AI integration can significantly enhance teaching and foster personalized, adaptive learning experiences. By participating in these tasks, you gained critical insights into how AI can:
+
+1\. 	**Enhance Active Learning**: AI, when paired with active learning techniques, can generate personalized content that adapts in real-time to student performance, increasing both engagement and autonomy.
+
+2\. 	**Facilitate Assignment Creation**: AI-generated assignments are personalized, flexible, and relevant to real-world contexts, helping students apply theoretical knowledge in practical scenarios.
+
+3\. 	**Tailor Assessments for Inclusivity**: AI-powered assessments adapt to individual student needs, including multilingual options, special accommodations, and customizable difficulty levels, ensuring inclusivity and accessibility.
+
+4\. 	**Refine Teaching Strategies Through Feedback**: AI provides immediate, actionable feedback to both students and teachers, helping refine instruction and assessments based on student engagement and learning outcomes.
+
+The **Holistic AI-Enhanced Framework for Active Learning** underscores the importance of combining AI’s support in teaching with human-centric elements such as creativity, empathy, and critical thinking. This framework ensures educators leave the session equipped to incorporate AI into their teaching practices effectively.
