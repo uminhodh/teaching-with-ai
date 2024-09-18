@@ -12,3 +12,9 @@ Create a learning assignment for assignment for my
 focusing on [insert key concepts or challenges related to the topic].
 ```
 EXAMPLE: Create a learning assignment for my *Intermediate French* class, focusing on *verb conjugation in the past tense and improving conversational fluency*
+
+
+STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1vKuT6iwahAn5KZt6A3uCKTOszBkhR5Oyck0q50X1r5o/edit?usp=sharing).
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/9b35a4e7-a955-4507-bcf3-83f130eee005)**  
+

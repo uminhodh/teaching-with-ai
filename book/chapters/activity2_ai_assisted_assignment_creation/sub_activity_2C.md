@@ -25,3 +25,7 @@ Step 7\. Help me revise the feedback you gave me. Help me prioritise and apply t
 
 Step 8\. Apply the rubric provided by the professor to my final assignment. 
 ```
+
+**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1227sNj9r3dsTntcZIu7Szq8c6eHSeJBRBKVoDAZKaHI/edit?usp=sharing).**
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/938a1275-7157-47e0-a425-e322aac98940)**  

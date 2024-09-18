@@ -117,3 +117,7 @@ This prompt leverages **conversational prompting** to engage the user, **structu
 **\[Personalized feedback based on performance\]**
 
 ```
+
+**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1gvyGPyxDxhFWfEUhvY5SDN0Du_wNAn3tTZcoLILw6qY/edit?usp=sharing).**
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/c1855b04-9b5f-49c8-aa8e-4410bc5014ef)**

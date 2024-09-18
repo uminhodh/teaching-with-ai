@@ -43,3 +43,7 @@ Let’s start by defining the topic and key concepts for your quiz. You will cre
 
 **Step 5: Multilingual Option** In which language(s) would you like to create this quiz? Would you like a bilingual version for international students?
 ```
+
+**STRUCTURED PROMPT** [HERE](https://docs.google.com/document/d/1XtFBgcf9mXpbCPFEIXl6RutgLZNzVzfNBygPN20MSJA/edit?usp=sharing) 
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/cada8248-6db2-442b-b3c6-6637931e72fc)**  

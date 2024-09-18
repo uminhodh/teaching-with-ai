@@ -54,3 +54,10 @@ Once the five assignments are presented, I will choose the one I find most suita
 * Rubric for Evaluation  
 * Final Notes
 ```
+
+
+**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1qEYxhwpU-KNQM7zvS0NNNNkew9vV-EKVz2P-IHm3IZ8/edit?usp=sharing).**
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/2bfd477d-3c5f-4486-9e36-fc5beeac4d0f)**  
+
+**VS HYBRID PROMPTING [HERE](https://chatgpt.com/share/8e418dc6-7fd3-4358-8436-4eec4d62e8fc)**  

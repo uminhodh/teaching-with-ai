@@ -14,9 +14,6 @@
 2. **Post and Rating**:  
    Share the quiz in the "Activity 3A: Quiz" column on Padlet, rating how effectively it addresses inclusivity and adaptability.
 
-**STRUCTURED PROMPT** [HERE](https://docs.google.com/document/d/1XtFBgcf9mXpbCPFEIXl6RutgLZNzVzfNBygPN20MSJA/edit?usp=sharing) 
-
-**PATH SIMULATION [HERE](https://chatgpt.com/share/cada8248-6db2-442b-b3c6-6637931e72fc)**  
 
 ---
 
@@ -30,10 +27,6 @@
    Use AI to generate a quiz with both closed and open-ended questions. Ensure that each question includes detailed feedback for students.  
 2. **Post and Rating**:  
    Share the quiz on Padlet and evaluate its effectiveness based on the quality of feedback and variety of questions.
-
-**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1T1cHP5X_sRlXif4ob0KF5pna2--8VkqpLXWxpOQhaQo/edit?usp=sharing).**
-
-**PATH SIMULATION [HERE](https://chatgpt.com/share/085f15e7-f126-4ecb-9782-df80f17b9884)**  
 
 ---
 
@@ -52,6 +45,3 @@
    Reflect on how effectively AI accommodated customization in the quiz design. Did the customization options enhance the quiz’s inclusivity and challenge for students?  
    
 
-**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1gvyGPyxDxhFWfEUhvY5SDN0Du_wNAn3tTZcoLILw6qY/edit?usp=sharing).**
-
-**PATH SIMULATION [HERE](https://chatgpt.com/share/c1855b04-9b5f-49c8-aa8e-4410bc5014ef)**

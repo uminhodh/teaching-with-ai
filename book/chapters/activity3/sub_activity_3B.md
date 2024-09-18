@@ -107,3 +107,8 @@ You’re ready to begin your quiz\! This quiz includes both closed (multiple-cho
 **General Performance Feedback:**  
 **\[Personalized feedback based on performance\]**
 ```
+
+
+**STRUCTURED PROMPT [HERE](https://docs.google.com/document/d/1T1cHP5X_sRlXif4ob0KF5pna2--8VkqpLXWxpOQhaQo/edit?usp=sharing).**
+
+**PATH SIMULATION [HERE](https://chatgpt.com/share/085f15e7-f126-4ecb-9782-df80f17b9884)**  

@@ -14,9 +14,19 @@ You are grouped into pairs to explore how **Active Learning** intersects with on
 * Generate **1 to 3 questions** using ChatGPT that connect **Active Learning** with your concept, emphasizing AI’s role in enhancing these strategies.  
 * **Example Concept**:  
   * **AL & AI-Enhanced Assignments**:  
-    * How can AI-generated prompts support active learning through personalized and adaptive assignments?  
-    * How can generative AI enhance students' ability to self-assess their work in active learning assignments?  
-    * In what ways can AI-powered feedback tools deepen students' engagement in collaborative active learning tasks?
+    * How do you think the use of Generative AI, such as ChatGPT, can facilitate **Active Learning** through **real-time AI feedback** for students?  
+    * In what ways do you believe **real-time AI feedback** can enhance **Active Learning** by promoting student engagement and interaction?  
+    * How can **real-time AI feedback** be integrated into **Active Learning** activities to provide more immediate and personalized support for students?
+
+We would choose the question:
+
+**How can real-time AI feedback be integrated into Active Learning activities to provide more immediate and personalized support for students?**
+
+**Reason:** 
+
+* This question is practical and actionable, inviting educators to think about **how** they can apply AI tools in their teaching rather than just theoretical benefits.
+* It focuses on **integration**, which is a key challenge for educators when adopting new technology, and it aligns well with the goal of creating more **personalized** and **supportive learning environments**.
+* It encourages reflection on real classroom scenarios and makes the concept of **Active Learning** and **real-time feedback** more concrete for teachers.
 
 ·  **Post on Padlet (5 minutes)**:
 
@@ -56,4 +66,5 @@ One member from each group will present their conclusion orally, addressing the 
 * Group 18: Active Learning & AI-Enhanced Peer Feedback  
 * Group 19: Active Learning & AI-Powered Formative Assessments  
 * Group 20: Active Learning & AI-Powered Summative Assessments
-
+* Group 21: Active Learning & Conversational Prompting
+* Group 22: Active Learning & AI-Assisted Learning
